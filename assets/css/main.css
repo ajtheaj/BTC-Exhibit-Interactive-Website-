@@ -675,7 +675,17 @@ body {
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity .4s ease-in-out;
-    transition: opacity .4s ease-in-out
+    transition: opacity .4s ease-in-out;
+    animation: glow 1s linear infinite alternate;
+}
+/*animation for glowing*/
+@keyframes glow {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 4px #39D401, 0 0 6px #39D401, 0 0 8px #39D401, 0 0 10px #39D401, 0 0 12px #39D401, 0 0 14px #39D401;
+    }
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 6px #39D401, 0 0 8px #39D401, 0 0 10px #39D401, 0 0 12px #39D401, 0 0 14px #39D401, 0 0 14px #39D401;
+    }
 }
 
 .side-nav li.is-active::before {
