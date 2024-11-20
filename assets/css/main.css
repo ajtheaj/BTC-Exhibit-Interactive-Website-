@@ -277,7 +277,7 @@ body {
 }
 
 body {
-    background-color: #2A2356;
+    background-color: #0c0c0c;
     font-size: 14px;
     line-height: 1.6;
     font-family: "Montserrat", sans-serif;
@@ -373,7 +373,7 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #2A2356;
+    background-color: #0c0c0c;
     z-index: 12
 }
 
@@ -509,7 +509,7 @@ body {
 
 .header--logo p {
     margin: 0 0 0 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase
 }
@@ -588,7 +588,7 @@ body {
     transition: opacity .4s ease-in-out .4s
 }
 
-@media (max-width: 767px) {
+@media (max-width: 300px) {
     .header--cta {
         display: none
     }
@@ -808,17 +808,7 @@ body {
 }
 
 .intro--options>a:hover {
-    color: #fff;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow{
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #C252E1, 0 0 40px #C252E1, 0 0 50px #C252E1, 0 0 60px #C252E1, 0 0 70px #C252E1;
-    }
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #C252E1, 0 0 40px #C252E1, 0 0 50px #C252E1, 0 0 60px #C252E1, 0 0 70px #C252E1, 0 0 80px #C252E1;
-    }
+    color: #fff
 }
 
 .intro--options h3 {
@@ -1269,15 +1259,19 @@ body {
 }
 
 .about--options>a:nth-child(1) {
-    background-image: url("../img/about-winners.jpg")
+    background-image: url("../img/codeit.png")
 }
 
 .about--options>a:nth-child(2) {
-    background-image: url("../img/about-philosophy.jpg")
+    background-image: url("../img/takipsilim.png")
 }
 
 .about--options>a:nth-child(3) {
-    background-image: url("../img/about-history.jpg")
+    background-image: url("../img/dmt.png")
+}
+
+.about--options>a:nth-child(4) {
+    background-image: url("../img/promo.png")
 }
 
 .about--options>a:hover h3 {
@@ -1416,7 +1410,7 @@ body {
 .contact--lockup .modal {
     padding: 45px 45px;
     text-align: center;
-    background-color: #2A2356;
+    background-color: #0c0c0c;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.75)
 }
 
