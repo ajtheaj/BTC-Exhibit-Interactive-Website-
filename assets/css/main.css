@@ -567,30 +567,38 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    padding: 0 20px;
+    padding: 20x 40px; /* Adjust for better visibility */
     line-height: 30px;
     text-decoration: none;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: #0f33ff;
+    background-color: #00ffff; /* Neon cyan blue */
     border: none;
-    opacity: 0;
+    opacity: 5;
     visibility: hidden;
-    -webkit-transition: opacity .4s ease-in-out, visibility 0s .4s;
-    transition: opacity .4s ease-in-out, visibility 0s .4s
+    -webkit-transition: opacity 0.4s ease-in-out, visibility 0s 0.4s;
+    transition: opacity 0.4s ease-in-out, visibility 0s 0.4s;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Neon glow effect */
+    border-radius: 5px; /* Optional: adds rounded corners */
 }
 
 .header--cta:focus {
-    outline: none
+    outline: none;
 }
 
 .header--cta.is-active {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity .4s ease-in-out .4s;
-    transition: opacity .4s ease-in-out .4s
+    -webkit-transition: opacity 0.4s ease-in-out 0.4s;
+    transition: opacity 0.4s ease-in-out 0.4s;
 }
+
+.header--cta:hover {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff; /* Enhanced glow on hover */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+}
+
 
 @media (max-width: 300px) {
     .header--cta {
@@ -763,7 +771,8 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     background-color: transparent;
-    border: none
+    border: none;
+    color: #fff; /* Ensure text is visible on cyan */
 }
 
 .intro--banner button .btn-background {
@@ -772,26 +781,30 @@ body {
     left: 23px;
     right: 0;
     height: 100%;
-    background-color: #0f33ff;
+    background-color: #2188B1; /* Neon cyan blue */
     z-index: -1;
-    -webkit-transition: left .2s ease-in-out;
-    transition: left .2s ease-in-out
+    -webkit-transition: left 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out;
+    box-shadow: 0 0 10px #2188B1, 0 0 10px #2188B1, 0 0 10px #2188B1; /* Neon glow */
 }
 
 .intro--banner button:hover .btn-background {
-    left: 0
+    left: 0;
+    background-color: #0fd8e3; /* Slightly darker cyan on hover */
+    box-shadow: 0 0 20px #0fd8e3, 0 0 40px #0fd8e3, 0 0 60px #0fd8e3; /* Enhanced glow */
 }
 
 .intro--banner button:focus {
-    outline: none
+    outline: none;
 }
 
 .intro--banner button svg {
     position: relative;
     left: 5px;
     width: 15px;
-    fill: #fff
+    fill: #fff; /* Keeps the SVG icon white */
 }
+
 
 .intro--banner img {
     position: absolute;
@@ -1188,6 +1201,7 @@ body {
 }
 
 .about--banner h2 {
+	 padding: 10px;
     position: relative;
     margin-top: 35px;
     font-size: 68px;
@@ -1250,7 +1264,9 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 600px;
+	flex-direction: row;
+	gap: 15px; 
+    max-width: 900px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1262,16 +1278,31 @@ body {
 
 .about--options>a {
     position: relative;
+	display: block;
+	margin: 10px 0; 
     width: 150px;
     height: 75px;
     text-decoration: none;
     color: #fff;
-    border: 10px solid #0f33ff;
+    border: 10px solid #ff00ff;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
-}
+    background-repeat: no-repeat;
+	
 
+
+/* Add the glow effect */
+  box-shadow: 0 0 9px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  
+  /* Optional: smoother transitions */
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+  
+ }
+ 
+ .about--options > a:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff; /* Intensify glow */
+}
 .about--options>a:nth-child(1) {
     background-image: url("../img/codeit.png")
 }
@@ -1290,6 +1321,10 @@ body {
 
 .about--options>a:nth-child(5) {
     background-image: url("../img/btc.jpg")
+}
+
+.about--options>a:nth-child(6) {
+    background-image: url("../img/umak.jpg")
 }
 
 .about--options>a:hover h3 {
@@ -1426,23 +1461,39 @@ body {
 }
 
 .contact--lockup .modal {
-    padding: 45px 45px;
+     background-color: #1a1a1a; /* Dark background to enhance the neon effect */
+    border: 3px solid #8A2BE2; /* Neon violet border */
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.7), 0 0 40px rgba(138, 43, 226, 0.5); /* Glowing violet effect */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a sleek look */
     text-align: center;
-    background-color: #0c0c0c;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.75)
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
+.modal:hover {
+    box-shadow: 0 0 30px rgba(138, 43, 226, 1), 0 0 60px rgba(138, 43, 226, 0.8);
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
 
 .contact--lockup .modal--information p,
 .contact--lockup .modal--information a {
-    display: block;
-    margin: 14px 0;
+    color: #8A2BE2; /* Neon violet link color */
     text-decoration: none;
-    color: #fff;
-    font-weight: 700
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal a:hover {
+    color: #9370DB; /* Lighter violet on hover */
+    text-shadow: 0 0 10px #8A2BE2;
 }
 
 .contact--lockup .modal--information p {
-    margin-top: 0
+  margin: 10px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white text */
 }
 
 .contact--lockup .modal--options {
@@ -1895,7 +1946,6 @@ body {
 }
 
 /**CSS for the Exploration page**/
-/* Gallery Container Styling */
 .gallery {
   text-align: center;
   color: #fff;
@@ -1930,9 +1980,19 @@ body {
 
 .gallery-item img, 
 .gallery-item iframe {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  position: relative;
+  display: block;
+  width: 100%; /* Ensure images and videos fit the container */
+  border: 2px solid #00FFFF; /* Base border color */
+  border-radius: 8px; /* Optional: Slightly rounded corners */
+  box-shadow: 0 0 15px 3px rgba(0, 255, 255, 0.6); /* Subtle glow */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover,
+.gallery-item iframe:hover {
+  box-shadow: 0 0 25px 5px rgba(0, 255, 255, 0.9); /* Stronger glow on hover */
+  transform: scale(1.03); /* Slight zoom on hover */
 }
 
 /* Paragraph Captions */
