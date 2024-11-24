@@ -1246,20 +1246,18 @@ body {
     height: 75px;
     text-decoration: none;
     color: #fff;
-    border: 10px solid #ff00ff;
+    border: 3px solid #ff00ff;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 	
-
-
-/* Add the glow effect */
-  box-shadow: 0 0 9px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    /* Add the glow effect */
+    box-shadow: 0 0 9px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    
+    /* Optional: smoother transitions */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
   
-  /* Optional: smoother transitions */
-  transition: box-shadow 0.3s ease-in-out, transform 0.2s;
-  
- }
+}
  
  .about--options > a:hover {
   transform: scale(1.05); /* Slightly increase the size */
@@ -1294,10 +1292,13 @@ body {
 }
 
 .about--options h3 {
-    position: absolute;
+    position:absolute;
     bottom: -38px;
     left: 10px;
-    font-size: 16px;
+    display: block;
+    font-size: 12px;
+    text-shadow: -2px 2px 1px #1f1b24;
+    line-height: 95%;
     text-transform: uppercase;
     -webkit-transition: bottom .2s ease-in-out, left .2s ease-in-out;
     transition: bottom .2s ease-in-out, left .2s ease-in-out
